@@ -9,7 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+var countHits = 0
+    @IBOutlet weak var Label: UILabel!
+    
+    @IBOutlet weak var Button: UIButton!
+    
+    @IBAction func buttonHit(_ sender: Any) {
+     countHits = countHits + 1
+        Label.text = ("\(countHits)") + " "
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
